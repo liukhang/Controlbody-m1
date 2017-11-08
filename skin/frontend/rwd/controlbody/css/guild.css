@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800,900');
+/*start*/
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	margin: 0;
+}
+body, button, input, select, table, textarea{
+	color: #000;
+}
+.page-title h1,
+.page-title h2,
+.product-name h1,
+.product-name .h1 {
+  font-size: 30px;
+  font-family: 'Muli', sans-serif;
+  font-weight: 600;
+  color: #000;
+  border-bottom: 1px solid transparent;
+  padding-bottom: 3px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+a,span,p{
+    font-family: 'Muli', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0px;
+    color: #000;
+}
+a {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+  text-decoration: none;
+  color: #000;
+}
+a:active,
+a:hover {
+	text-decoration: none;
+	outline: 0;
+}
+a,img,button{
+	outline:none;
+}
+.nav-primary li.level0 > a{
+  font-family: 'Muli', sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: #222222;
+  padding: 0 15px;
+  font-weight: 400;
+}
+.nav-primary a:hover, .nav-primary li:hover > a{
+	color: #000;
+}
+#search{
+	padding: 0 30px;
+}
+#search_mini_form .search-button:before{
+    content: '\f002';
+    position: absolute;
+    font-family: FontAwesome;
+    font-size: 18px;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    background-position: 4px -146px;
+    color: #222;
+    background-image: none;
+    text-indent: unset;
+}
+#search_mini_form .search-button{
+	text-indent: unset;
+}
+.skip-link:not(.skip-active):hover{
+	opacity: unset;
+}
+body .input-text:focus{
+	outline: none;
+}
+input[type=email]:focus{
+	outline: none;
+	/*border: none;*/
+}
+/* .button:hover, .cart-table .product-cart-actions .button:hover, #co-shipping-method-form .buttons-set .button:hover, .footer .button:hover{
+	background: red;
+} */
+/* body input[type="checkbox"]:before{
+    background-image: url("../images/check.png");
+    background-position:-1px -287px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    // background: #eee;
+    width: 13px;
+    height: 13px;
+    border: 1px solid #fff;
+    margin-left: 0px;
+    margin-top: 0px;
+} */
+/* body input[type="checkbox"]:checked:after {
+    content: '\f00c';
+    font-family: FontAwesome;
+    position: absolute;
+    top: -4px;
+    color: #222;
+} */
+// body input[type="checkbox"]:checked:before{
+//     background-image: url("../images/check.png");
+//     background-position: -6px -257px;
+//     margin-left:  0px;
+//     margin-top: 0px;
+//     border: 1px solid #fff;
+// }
+.product-view .product-shop .price-box .regular-price .price, .product-view .product-shop .price-box .special-price .price, .product-view .product-shop .price-box .full-product-price .price{
+	color: #222;
+}
+.pro-quantity input {
+  border: none;
+  /* background: #eee; */
+  display: block;
+  float: left;
+  height: 50px;
+  text-align: center;
+  width: 40px;
+}
+.pro-quantity span {
+  background: #eee none repeat scroll 0 0;
+  cursor: pointer;
+  display: block;
+  float: left;
+  font-size: 18px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  width: 40px;
+  font-weight: bold;
+}
+.pro-quantity span.dec, .pro-quantity span.inc {
+  font-size: 24px;
+}
+.pro-quantity span.inc{}
+.pro-quantity span:hover {
+  background: #eee none repeat scroll 0 0;
+}
+.logo:hover {
+    opacity: unset;
+}

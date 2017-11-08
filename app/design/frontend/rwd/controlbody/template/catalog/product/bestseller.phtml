@@ -1,0 +1,31 @@
+
+<?php
+ 
+$_products = $this->getProductCollection();
+Mage::getSingleton('cataloginventory/stock')->addInStockFilterToCollection($_products); 
+if ($_products->getSize()) { ?>
+<div>
+<?php $i=0; foreach ($_products->getItems() as $_product): ?>
+<?php if ($i>5): continue; endif; ?>
+<div>
+<div>
+<a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>">
+<img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(65,65); ?>" alt="<?php echo $this->htmlEscape($_product->getName()) ?>"/>
+</a>
+<?php echo $_product->getDescription(); //also getShortDescription ?>
+</div>
+<div>
+<p><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->htmlEscape($_product->getName()) ?>)"><?php echo $_product->getName() ?></a></p>
+<?php //echo $this->helper(‘review/product’)->getSummaryHtml($_product, ‘short’) //product review link ?>
+<?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
+<?php //echo $this->helper(‘catalog/product’)->getPriceHtml($_product) ?>
+<?php echo $this->getPriceHtml($_product) ?>
+<?php echo $_product->getProductId(); ?>
+<?php if($_product->getevent_date()) {echo $_product->getevent_date();} ?>
+</div>
+</div>
+<?php $i++; endforeach; ?>
+<?php for($i;$i%5!=0;$i++): ?>
+<?php endfor ?>
+</div>
+<?php } ?>

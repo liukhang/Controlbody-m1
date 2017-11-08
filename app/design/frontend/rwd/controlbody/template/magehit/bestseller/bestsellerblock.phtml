@@ -1,0 +1,111 @@
+<?php
+$_item = $this->getStoreconfig();
+$enable = $_item['enabled'];
+$title = $_item['horizontal_carousels_setting_title'];
+$limit = $_item['horizontal_carousels_setting_limit'];
+$slide_itemsonpage = $_item['horizontal_carousels_setting_slide_itemsonpage'];
+$slide_auto = $_item['horizontal_carousels_setting_slide_auto'];
+    if($slide_auto == 1) $slide_auto = 'true'; else $slide_auto = 'false';
+$slide_navigation = $_item['horizontal_carousels_setting_slide_navigation'];
+    if($slide_navigation == 1) $slide_navigation = 'true'; else $slide_navigation = 'false';
+$_helper = Mage::helper('catalog/output');
+
+?>
+<?php if ($enable): ?>
+    <?php 
+        // $_productCollection=$this->getLoadedProductCollection();
+        $_productCollection=$this->getBestsellerproduct($limit) 
+    ?>
+
+    <div class="bestseller">
+        <div class="bshead">
+            <h2 class="subtitle"><?php echo $this->__($title); ?></h2>
+        </div>
+        <?php if ($_productCollection->count()): ?>
+    <ul class="products-grid ">
+        <?php $i=0; foreach ($_productCollection as $_product): ?>
+            <?php /*if ($i++%$_columnCount==0): ?>
+            <?php endif*/ ?>
+            <li class="item last">
+                <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image">
+                    <?php $_imgSize = 210; ?>
+                    <img id="product-collection-image-<?php echo $_product->getId(); ?>"
+                         src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($_imgSize); ?>"
+                         alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" />
+                </a>
+                <div class="product-info">
+                    <h2 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></a></h2>
+
+                    <p>
+                        aaaa
+                        <?php 
+                            echo $_product->getAttributeText('custom_color');
+                         ?>
+
+                    </p>
+                    <?php
+                    // Provides extra blocks on which to hang some features for products in the list
+                    // Features providing UI elements targeting this block will display directly below the product name
+                    if ($this->getChild('name.after')) {
+                        $_nameAfterChildren = $this->getChild('name.after')->getSortedChildren();
+                        foreach ($_nameAfterChildren as $_nameAfterChildName) {
+                            $_nameAfterChild = $this->getChild('name.after')->getChild($_nameAfterChildName);
+                            $_nameAfterChild->setProduct($_product);
+                            echo $_nameAfterChild->toHtml();
+                        }
+                    }
+
+                    ?>
+                    <?php 
+                        $_nameAfterChild = $this->getLayout()->getBlock('product_list.swatches');
+                        $_nameAfterChild->setProduct($_product);
+                        echo $_nameAfterChild->toHtml();
+                     ?>
+                    <?php echo $this->getPriceHtml($_product, true) ?>
+                    <?php if($_product->getRatingSummary()): ?>
+                    <?php echo $this->getReviewsSummaryHtml($_product, 'short') ?>
+                    <?php endif; ?>
+                    <div class="actions">
+                        <?php if(!$_product->canConfigure() && $_product->isSaleable()): ?>
+                            <button type="button" title="<?php echo $this->quoteEscape($this->__('Add to Cart')) ?>" class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')"><span><span><?php echo $this->__('Add to Cart') ?></span></span></button>
+                        <?php elseif($_product->getStockItem() && $_product->getStockItem()->getIsInStock()): ?>
+                            <a title="<?php echo $this->quoteEscape($this->__('View Details')) ?>" class="button" href="<?php echo $_product->getProductUrl() ?>"><?php echo $this->__('View Details') ?></a>
+                        <?php else: ?>
+                            <p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </li>
+            <?php /*if ($i%$_columnCount==0 || $i==$_collectionSize): ?>
+            <?php endif*/ ?>
+        <?php endforeach ?>
+    </ul>
+    </div>
+    <?php else: ?>
+        <div class="show-msg">
+            <?php echo $this->__("There are no best seller products."); ?> 
+        </div>
+    <?php endif; ?>
+<?php endif; ?>
+<script type="text/javascript">decorateGeneric($$('ul.products-grid'), ['odd','even','first','last'])</script>
+<?php
+// Provides a block where additional page components may be attached, primarily good for in-page JavaScript
+if ($this->getChild('after')) {
+    $_afterChildren = $this->getChild('after')->getSortedChildren();
+    foreach ($_afterChildren as $_afterChildName) {
+        $_afterChild = $this->getChild('after')->getChild($_afterChildName);
+        //set product collection on after blocks
+        $_afterChild->setProductCollection($_productCollection);
+        echo $_afterChild->toHtml();
+    }
+}
+$_AfterChild = $this->getLayout()->getBlock('configurableswatches.media.js.list');
+$_AfterChild->setProductCollection($_productCollection);
+echo $_AfterChild->toHtml();
+?>
+
+<?php 
+// $attr = Mage::getModel('eav/entity_attribute')->getCollection()->addFieldToFilter('frontend_label', 'kalor');
+
+//     echo print_r($attr->getData('custom_color'));
+ ?>
