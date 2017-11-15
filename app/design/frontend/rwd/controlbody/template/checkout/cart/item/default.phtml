@@ -199,12 +199,16 @@ $canApplyMsrp = Mage::helper('catalog')->canApplyMsrp($_item->getProduct(), Mage
         <?php endif; ?>
     <?php endif; ?>
     <td class="product-cart-actions" data-rwd-label="<?php echo $this->__('Qty'); ?>">
+        <input type="text" pattern="\d*(\.\d+)?" name="cart[<?php echo $_item->getId() ?>][qty]" value="<?php echo $this->getQty() ?>" size="4"
+        data-cart-item-id="<?php echo $this->jsQuoteEscape($_item->getSku()) ?>"
+        title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="input-text qty" maxlength="12" />
 
+        <button type="submit" name="update_cart_action" data-cart-item-update value="update_qty" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Update')); ?>" class="button btn-update"><span><span><?php echo $this->__('Update'); ?></span></span>
+        </button>
 
         <ul class="cart-links">
             <?php if ($isVisibleProduct): ?>
                 <li>
-                    <span><?php echo $this->getQty() ?></span>
                     <a class="edit-item-ckeckout" href="<?php echo $this->getConfigureUrl() ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Edit item parameters')) ?>"><i class="fa fa-pencil" aria-hidden="true"></i></a>
                 </li>
             <?php endif ?>

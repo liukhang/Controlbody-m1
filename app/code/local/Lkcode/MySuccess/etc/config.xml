@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Lkcode_MySuccess>
+            <version>1.0</version>
+        </Lkcode_MySuccess>
+    </modules>
+    <global>
+        <blocks>
+            <lkcode_mysuccess>
+                <class>Lkcode_MySuccess_Block</class>
+            </lkcode_mysuccess>
+        </blocks>
+    </global>
+    <frontend>
+        <routers>
+            <lkmysuccess>
+                <use>standard</use>
+                <args>
+                    <module>Lkcode_MySuccess</module>
+                    <frontName>lkmysuccess</frontName>
+                </args>
+            </lkmysuccess>
+        </routers>
+        <layout>
+            <updates>
+                <compare>
+                    <file>lkcode/mysuccess.xml</file>
+                </compare>
+            </updates>
+        </layout>
+    <!-- End of New Lines -->
+ 
+    </frontend>
+</config>

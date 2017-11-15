@@ -1,0 +1,45 @@
+.content-header {
+    margin-bottom: 0px;
+    border: 1px solid #dfdfdf;
+    padding: 10px;
+    background: #f8f8f8;
+}
+.content-header h3{
+    padding: 0px;
+    color: #333;
+    font-weight: bold;
+    margin: 0px;
+}
+#data_grid table.actions{
+    border: 1px solid #ddd;
+    border-top: 0px;
+    border-bottom: 0px;
+    margin: 0px;
+}
+#data_grid table.actions td{
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+}
+button.scalable{
+    background-image: linear-gradient(to bottom, #FFFFFF 0px, #E0E0E0 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#ffffff', endColorstr='#E0E0E0');/*For IE7-8-9*/ 
+    background-repeat: repeat-x;
+    border-color: #CCCCCC;
+    text-shadow: 0 1px 0 #FFFFFF;
+    color: #333;
+    background-color: #fff;
+}
+.grid tr.headings th{
+    border-color: #ddd;
+}
+.grid tr.filter .range .label{
+    color: #2d444f;
+}
+.vss-grid-action{
+    float: left;
+    margin-left: 16px;
+}
+.vss-grid-action .glyphicon{
+    color: grey;
+}

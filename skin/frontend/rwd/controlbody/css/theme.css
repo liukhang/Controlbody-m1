@@ -1,3 +1,6 @@
+a:hover{
+    color: #000;
+}
 .logo{
     max-width: 100%;
     width: unset;
@@ -258,6 +261,9 @@ ul.categories-custom a span {
     width: 45%;
     float: left;
 }
+.home-banner-2 .hb-left img{
+    width: 100%;
+}
 .home-banner-2 .hb-right{
     width: 45%;
     float: right;
@@ -320,7 +326,9 @@ address{
 .footer a, .footer span, .footer p{
     font-size: 12px;
     text-transform: none;
+    font-weight: 600;
     display: block;
+    line-height: 24px;
 }
 .col1, .col2, .col3{
     width: 15%;
@@ -680,7 +688,7 @@ i.fa.fa-heart-o {
 }
 #header-account.skip-active {
     top: 61px;
-    right: -15px;
+    right: -14px;
 
 }
 #search {
@@ -748,9 +756,9 @@ i.custom-symbol {
     display: none;
 }
 .cart .cart-totals table td.c-subtotal{
-    width: 79%;
+    width: 70%;
     text-align: right;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 800;
 }
 .cart .cart-totals table td.custom-vat{
@@ -779,7 +787,18 @@ i.custom-symbol {
 }
 .cart-table .cart-links > li > a {
     display: inline;
-    float: right;
+    /* float: right; */
+    position: absolute;
+    right: 0;
+    top: 20px;
+}
+.cart-table .product-cart-actions{
+    position: relative;
+}
+.cart-table .product-cart-actions .button {
+    margin-bottom: 11px;
+    height: 30px;
+    background: #000;
 }
 #discount-coupon-form .input-text{
     width: 60%;
@@ -795,6 +814,11 @@ i.custom-symbol {
     position: relative;
     color: #fff;
     text-decoration: none;
+    border: 1px solid #000;
+}
+#discount-coupon-form .field-wrapper button span:hover{
+    background: #fff;
+    color: #000;
 }
 #discount-coupon-form .button-wrapper{
     width: 20%;
@@ -804,9 +828,9 @@ i.custom-symbol {
     width: 100%;
     padding-left: 0;
 }
-td.c-price span {
-    font-size: 28px;
-    font-weight: 700;
+.checkout-cart-index td.c-price span {
+    font-size: 24px;
+    font-weight: 600;
 }
 ul.checkout-types.bottom li{
     margin: 30px 0 0 0 ;
@@ -820,6 +844,13 @@ ul.checkout-types.bottom li{
     height: 50px;
     background: #000;
     color: #fff;
+}
+.cart-totals .checkout-types .btn-checkout:hover{
+    background: #fff;
+    border: 1px solid #000;
+}
+.cart-totals .checkout-types .btn-checkout:hover span{
+    color: #000;
 }
 .cart-totals .checkout-types .btn-checkout span {
     color: #fff;
@@ -953,6 +984,9 @@ a.size_open:hover{
     max-width: 100%;
     height: 50px;   
 }
+#contactForm textarea{
+    max-width: 430px;
+}
 .contacts-map {
     display: block;
     clear: both;
@@ -1021,23 +1055,11 @@ li.amshopby-cat.amshopby-cat-level-1.amshopby-cat-multi {
 .block-layered-nav dl dd ol > li > a .count{
     display: none;
 }
-
-
-li.wide-swatch a span{
-    display: none;
+.swatch-link{
+    border: 1px solid transparent;
 }
-body.cms-index-index.cms-home li.wide-swatch a{
-    min-width: 15px !important;
-    height: 15px !important;
-}
-li.option-white.wide-swatch a{
-    background: white;
-}
-li.option-black.wide-swatch a{
-    background: black;
-}
-li.option-pink.wide-swatch a{
-    background: #b55c6c;
+.swatch-link img{
+    border-radius: 0;
 }
 .swatch-link, .swatch-label{
     border-radius: 0;
@@ -1050,6 +1072,9 @@ li.option-pink.wide-swatch a{
 .button span{
     color: #fff;
 }
+h2.product-name a:hover, h3.product-name a:hover, h4.product-name a:hover, h5.product-name a:hover, p.product-name a:hover{
+    color: #000;
+}
 .button:hover{
     background: #fff;
 }
@@ -1057,25 +1082,159 @@ li.option-pink.wide-swatch a{
     color: #000;
 }
 
+.discount-form {
+    position: relative;
+    padding-bottom: 30px;
+}
+div#advice-required-entry-coupon_code {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.firecheckout-index-index span.freeship {
+    display: none;
+}
+.firecheckout-index-index .a-right{
+    text-align: left;
+}
+.firecheckout-index-index .a-right.last, .firecheckout-index-index td.c-price.last{
+    text-align: right;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.firecheckout-section .block-title, .firecheckout-section, .firecheckout-section .block-title .num{
+    background: none;
+    border: none;
+    border-radius: 0;
+}
+.radiocustom.radiocustom-left {
+    width: 50%;
+    float: left;
+}
+.firecheckout-set input.input-text, .firecheckout-set select, .firecheckout-set textarea{
+    border-color: none;
+    border-radius: 0;
+    height: 50px;
+}
+.form-list .control input.checkbox{
+    margin-left: 0;
+}
+.form-list.same-as-billing .control{
+    margin-left: 10px;
+}
+span#payment-method-reset, span#shipping-method-reset{
+    display: none;
+}
+#checkout-review-load td.a-right {
+    width: 90px;
+}
+.firecheckout-index-index a.jqTransformCheckbox{
+    background: #ccc;
+    display: inline-block;
+}
+.form-list .control label{
+    padding: 0px 10px 6px 0px;
+}
+.firecheckout-index-index a.jqTransformChecked::after{
+    top: -2px;
+    position: absolute;
+}
+.firecheckout-index-index .jqTransformRadio{
+    background: #ccc;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+}
+.firecheckout-index-index .jqTransformRadioWrapper{
+    float: none;
+    display: inline-block;
+    margin: 0;
+    margin-right: 10px;
+}
+.firecheckout-index-index .radiocustom a.jqTransformChecked::after{
+    position: absolute;
+    font-size: 20px;
+    font-weight: 100;
+    top: 5px;
+}
+.firecheckout-set input.input-text, .firecheckout-set select, .firecheckout-set textarea{
+    border-color: #ccc;
+}
+a.continude-shop {
+    padding: 10px 15px;
+    border: 1px solid #000;
+}
+.firecheckout-index-index .block-subscribe a.jqTransformCheckbox{
+    background: #fff;
+}
+p.firecheckout-login-wrapper {
+    display: none;
+}
+.firecheckout-index-index .page-title h1{
+    float: none;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.youama-window-title h3 {
+    display: block;
+    margin: 0;
+    color: #000;
+    text-align: center;
+    text-transform: none;
+    margin-bottom: 5px;
+}
+span.popup-login-1 {
+    font-weight: bold;
+}
+.youama-window-box.last {
+    margin-top: 0;
+}
+.youama-window-title{
+    text-align: center;
+}
+.youama-window-box .box-contents-button button, button.button.btn-proceed-checkout.btn-checkout.youama-ajaxlogin-button {
+    width: 100%;
+}
+.youama-window-box span, .youama-window-box p {
+    display: block;
+    text-align: center;
+    color: #000;
+    font-weight: 600;
+}
+.youama-window-box .box-contents-button{
+    margin-top: 0;
+}
+button.button.btn-proceed-checkout.btn-checkout.youama-ajaxlogin-button span, button.button.btn-proceed-checkout.btn-checkout.youama-ajaxlogin-button span{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+button.button.btn-proceed-checkout.btn-checkout.youama-ajaxlogin-button:hover span, button.button.btn-proceed-checkout.btn-checkout.youama-ajaxlogin-button:hover span {
+    color: #000;
+}
+button.button.btn-proceed-checkout.btn-checkout.youama-ajaxlogin-button {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 10px 0;
+}
+.youama-window-box.second {
+    margin-top: 0;
+}
+#header-account a:hover{
+    color: #000;
+}
+.youama-window-box .input-fly input[type="text"], .youama-window-box .input-fly input[type="password"] {
+    font-size: 12px;
+    padding: 10px;
+    height: 40px;
+    border: none;
+}
+.youama-window-box .input-fly input[type="text"]:focus, .youama-window-box .input-fly input[type="password"]:focus {
+    outline: none;
+}
+#header-account.skip-active{
+    background: #ccc;
+}
 
 
 

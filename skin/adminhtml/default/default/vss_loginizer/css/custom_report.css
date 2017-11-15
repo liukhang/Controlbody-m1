@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 26 Dec, 2014, 4:34:36 PM
+    Author     : velocity-pc-1620
+*/
+
+  .chosen-container-multi .chosen-choices {
+        padding-right: 10px;
+        /*padding-top: 10px;*/
+    }
+    #website_select_chosen {
+        width:80% !important;
+    }
+    
+    #website_select_chosen li {
+        width:auto !important;
+    }
+   #website_select_chosen li.search-field input[type="text"]{
+        height:25px;
+    }
+    
+    td.no_top_border{
+        border-top :none !important; 
+    }
+    .vss_info1  i {
+
+        margin-left: 5px !important; 
+        margin-top: 7px !important;
+        cursor: pointer;
+
+    }
+    .vss_info1 > .glyphicon{
+        color:#496CAD;
+    }
+
+    .color-preview{
+
+        border: 1px solid #000000;
+        float: left;
+        height: 16px;
+        margin: 6px 0 0 6px;
+        width: 16px;
+
+    }
+
+    #tab_general_settings_contents table {
+        width: 100% !important; 
+    }
+
+
+
+    .vss_radio div {
+        margin:0 0 0.75em 0;
+    }
+
+    .vss_radio input[type="radio"] {
+        display:none !important;
+    }
+    .vss_radio input[type="radio"] + label {
+        color: #292321;
+        font-family:Arial, sans-serif;
+        font-size:14px;
+    }
+    .vss_radio input[type="radio"] + label span {
+        display:inline-block;
+        width:19px;
+        height:19px;
+        margin:-1px 4px 0 0;
+        vertical-align:middle;
+        cursor:pointer;
+        -moz-border-radius:  50%;
+        border-radius:  50%;
+    }
+
+    .vss_radio input[type="radio"] + label span {
+        background-color:#C4C4C4;
+    }
+
+    .vss_radio input[type="radio"]:checked + label span{
+        background-color:#496CAD;
+    }
+    label.switch_label{
+        margin-left: 5px !important;
+    }
+    .vss_radio input[type="radio"] + label span,
+    .vss_radio input[type="radio"]:checked + label span {
+        -webkit-transition:background-color 0.2s linear;
+        -o-transition:background-color 0.2s linear;
+        -moz-transition:background-color 0.2s linear;
+        transition:background-color 0.2s linear;
+    }   
+    #analysis_select_chosen{
+        margin-left: 5px;
+    }
+    
+    .chosen-container-single .chosen-single {
+        line-height: 20px ! important;
+    }

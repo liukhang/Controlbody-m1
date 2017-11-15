@@ -1,0 +1,21 @@
+Ajax Popup Loginizer,Ajax Popup Loginizer
+Current Configuration Scope,Current Configuration Scope
+Go to Dashboard,Go to Dashboard
+Dashboard,Dashboard
+General Settings,General Settings
+Save,Save
+Cancel,Cancel
+Activate Popup,Activate Popup
+Enable/Disable the module for store.,Enable/Disable the module for store.
+Include AddOn,Include AddOn
+Select additional options for popup.Forgot Password option will add form to recover password within popup. Sign Up form will add Registration functionality in popup. If any of these option is disabled then user will be redirect to default registration page or forgot password page accordingly.,Select additional options for popup.Forgot Password option will add form to recover password within popup. Sign Up form will add Registration functionality in popup. If any of these option is disabled then user will be redirect to default registration page or forgot password page accordingly.
+Forgot Password,Forgot Password
+Sign Up Form,Sign Up Form
+Text For Popup Link,Text For Popup Link
+Enter the text for popup login link which will display with top links.,Enter the text for popup login link which will display with top links.
+Include JQuery File,Include JQuery File
+jQuery i.e. a javascript framework is required for this plugin to work. Sometimes themes used in magento already includes it but sometime they dont. If jquery is already included in your theme select no else select yes to include it.,jQuery i.e. a javascript framework is required for this plugin to work. Sometimes themes used in magento already includes it but sometime they dont. If jquery is already included in your theme select no else select yes to include it.
+Admin,Admin
+Front,Front
+Please provide required text,Please provide required text
+

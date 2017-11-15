@@ -1,0 +1,8 @@
+<config>
+    <modules>
+        <Lk1_Helloworld>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Lk1_Helloworld>
+    </modules>
+</config>

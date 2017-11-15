@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <action method="addCss">
+                <stylesheet>lkcode-message/css/lkcode-message.css</stylesheet>
+            </action>
+        </reference>
+        <reference name="after_body_start">
+        <block type="lkcode_mysuccess/index" name="lkcode1.mysuccess.lkmysuccess" template="lkcode/mysuccess/lkmysuccess.phtml"/>
+        </reference>
+    </default>
+    <!-- This identifier is composed by frontName_controllerName_actionName -->
+    <lkmysuccess_index_index translate="label">
+ 
+        <!-- This is a reference to the container <head> -->
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>lkcode/mysuccess/css/styles.css</name>
+            </action>
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>lkcode/mysuccess/js/script.js</name>
+            </action>
+        </reference>
+ 
+        <!-- This is a reference to the main container of the page -->
+        <reference name="content">
+            <!-- Here we create a block using the Block class we created in the Block directory. -->
+            <!-- The "type" attribute references to that Block class -->
+            <!-- Then we put a name to the block which needs to be unique, and point it to a phtml file with the whole view in it -->
+            <block type="lkcode_mysuccess/index" name="lkcode1.mysuccess.lkmysuccess" template="lkcode/mysuccess/lkmysuccess.phtml"/>
+        </reference>
+ 
+    </lkmysuccess_index_index>
+</layout>

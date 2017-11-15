@@ -31,7 +31,7 @@
         <?php if(!$_product->isGrouped()): ?>
         <div class="qty-wrapper pro-quantity float-left">
             <div class="qty-ct">
-                <input type="text" pattern="\d*(\.\d+)?" name="qty qtybutton" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="input-text qty pro-quantity-box" />
+                <input type="text" pattern="\d*(\.\d+)?" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo Mage::helper('core')->quoteEscape($this->__('Qty')) ?>" class="input-text qty pro-quantity-box" />
             </div>
         </div>
         <?php endif; ?>

@@ -29,7 +29,11 @@
 <!--
 Default layout, loads most of the pages
 -->
-
+<!--     <default>
+        <reference name="after_body_start">
+            <block type="core/template" name="a" template="page/html/a.phtml"/>
+        </reference>      
+    </default> -->
     <cms_menu>
         <reference name="left_first">
             <block type="cms/block" name="cms_menu" >

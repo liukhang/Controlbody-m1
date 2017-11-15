@@ -22,14 +22,113 @@
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
 
-
 }
-@media only screen and (min-width: 768px){
+@media only screen and (max-width: 992px){
+	.col1, .col2, .col3, .col4, .col5{
+		width: 100%;
+	}
+	.checkout-cart-index .cart-forms{
+		width: 100%;
+	}
+	.display-single-price .cart-totals-wrapper{
+		width: 100%;
+		padding-left: 0;
+	}
+	.cart .cart-totals{
+		padding-left: 0;
+	}
+	.cart .cart-totals table td.c-subtotal{
+		text-align: left;
+	}
+	.cart .cart-totals table td:first-child{
+		padding-left: 0;
+	}
+	.cart-totals .checkout-types .btn-checkout{
+		width: 100%;
+	}
+	.skip-cart .count{
+		top: 0;
+		right: auto;
+	}
+	.contact-left{
+		text-align: center;
+		float: none;
+		padding: 0;
+		width: 100%;
+	}
+	 .contact-right{
+	 	width: 100%;
+	 	float: none;
+	 	padding: 0;
+	 	border: none;
+	 }
+	 #contactForm input{
+	 	width: 100%;
+	 }
+	 #contactForm textarea{
+	 	width: 100%;
+	 	max-width: 100%;
+	 }
+	 .contacts-index-index .buttons-set{
+	 	width: 100%;
+	 }
+	 .support ul li h2, .support ul li span{
+	 	display: block;
+	 }
+	 .support ul li{
+	 	width: 100%;
+	 }
+}
+@media only screen and (max-width: 770px){
 	.button.search-button.search_open{
 		display: none;
 	}
+	.skip-link{
+		width: 25%;
+		border: none;
+	}
+	.skip-nav{
+		width: 25%;
+	}
 }
-
+@media only screen and (max-width: 768px){
+	.page-header-container #header-search #search{
+		display: block !important;
+	}
+	button.button.search-button.default{
+		display: block;
+	}
+	button.button.search-button.custom{
+		display: none;
+	}
+	.h-left {
+	    display: block;
+	    float: none;
+	}
+	.h-mid {
+	    display: block;
+	    float: none;
+	}
+	.logo .small{
+		display: inline-block;
+	}
+	.logo{
+		display: inline-block;
+		float: none;
+	}
+	.h-right {
+	    display: inline-block;
+	    float: left;
+	    text-align: center;
+	    width: 100%;
+	}
+	.product-view .product-shop{
+		width: 100%;
+	}
+	.product-img-box{
+		width: 100%;
+	}
+}
 @media only screen and (max-width: 767px) {
 	.page-header-container #header-search #search{
 		display: block !important;
@@ -48,9 +147,39 @@
 	    display: block;
 	    float: none;
 	}
+	.home-banner-2 .hb-left, .home-banner-2 .hb-right{
+		width: 100%;
+	}
+	.support ul li h2, .support ul li span{
+		font-size: 14px;
+		float: none;
+		display: block;
+	}
+	.support ul li img {
+    	display: inline-block;
+    	float: none;
+	}
+
+	.std .home-banner ul li{
+		width: 29%;
+		margin-bottom: 15px;
+	}
+	#header-account.skip-active{
+		top: 0;
+		right: auto;
+	}
 }
 @media only screen and (max-width: 568px) {
-
+	.std .home-banner ul li {
+	    margin-bottom: 15px;
+	    margin-left: 10px;
+	    width: 40%;
+	}
+	.support ul li {
+	    float: left;
+	    padding-left: 15px;
+	    width: 100%;
+	}
 }
 @media only screen and (max-width: 425px) {
 
